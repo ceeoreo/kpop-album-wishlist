@@ -20,12 +20,20 @@ main {
 .tabs {
     display: flex;
     flex-wrap: wrap;
+    border: 2px solid;
 }
 
 .radio-labels {
     cursor: pointer;
     margin-bottom: 30px;
     padding-right: 50px;
+    padding: 20px 20px 0;
+}
+
+#purchase-label {
+    width: 48%;
+    border-left: 2px solid;
+    border-bottom: 2px solid;
 }
 
 .radio-tabs {
@@ -48,9 +56,10 @@ main {
     display: initial;
 }
 
-.wishlist-cards {
-
+.radio-tabs:checked+#purchase-label {
+    border-bottom: none;
 }
+
 
 .price-display {
     border-bottom: 2px solid;
