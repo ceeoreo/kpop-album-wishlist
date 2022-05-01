@@ -1,0 +1,43 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Montserrat&display=swap');
+
+body {
+    font-family: Montserrat;
+    margin: 0;
+}
+
+#site-title {
+    font-family: Comfortaa;
+    margin: 40px;
+    text-align: center;
+}
+
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.radio-labels {
+    cursor: pointer;
+    padding: 0 50px 30px;
+}
+
+.radio-tabs {
+    display: none;
+}
+
+.tab-content {
+    order: 1;
+    width: 100%;
+    display: none;
+    margin: 0 50px;
+}
+
+.radio-tabs:checked+.radio-labels {
+    text-decoration: underline;
+
+}
+
+.radio-tabs:checked+.radio-labels+.tab-content {
+    display: initial;
+}
