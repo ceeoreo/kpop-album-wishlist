@@ -21,6 +21,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     border: 2px solid;
+    height: 60vh;
 }
 
 .radio-labels {
@@ -30,11 +31,11 @@ main {
     padding: 20px 20px 0;
 }
 
-#purchase-label {
+/* #purchase-label {
     width: 48%;
     border-left: 2px solid;
     border-bottom: 2px solid;
-}
+} */
 
 .radio-tabs {
     display: none;
@@ -56,9 +57,9 @@ main {
     display: initial;
 }
 
-.radio-tabs:checked+#purchase-label {
+/* .radio-tabs:checked+#purchase-label {
     border-bottom: none;
-}
+} */
 
 
 .price-display {
