@@ -87,7 +87,9 @@ main {
 /* Album cards */
 
 .album-cards {
-    
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
 }
 
 .album-card {
