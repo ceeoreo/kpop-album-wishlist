@@ -35,10 +35,6 @@ main {
     padding: 20px 20px 0;
 }
 
-#purchase-label {
-    visibility: hidden;
-}
-
 .radio-tabs {
     display: none;
 }
@@ -133,7 +129,9 @@ main {
 }
 /* Album cards */
 
-.album-cards {
+.album-cards,
+.purchased-album-cards
+{
     display: flex;
     flex-flow: column wrap;
     align-items: center;
@@ -147,4 +145,3 @@ main {
     width: 75%;
     height: 
 }
-

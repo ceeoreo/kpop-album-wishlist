@@ -11,6 +11,7 @@ const artistName = document.getElementById('artist');
 const priceInput = document.getElementById('price');
 const linkInput = document.getElementById('link');
 
+const purchasedAlbumCards = document.querySelector('.purchased-album-cards');
 //when add album is clicked, album form is no longer hidden
 let initiateAdd = () => {
     wishModalBg.classList.add('active-bg');
@@ -24,6 +25,30 @@ let cancelAdd = () => {
 }
 
 cancelButton.addEventListener('click', cancelAdd);
+
+// Add purchased album to purchased tab
+// grab clicked card
+// remove it from wishlist tab
+// add it to purchase tab
+
+let purchaseTabAdd = () => {
+    // let card = this.albumCard;
+    let checkedBox = document.querySelector("input[type=checkbox]");
+    console.log(5)
+    checkedBox.onchange = purchaseAddEvent;
+    console.log(6)
+    // console.log('hey');
+    // console.log(card);
+    // purchasedAlbumCards.append(card);
+    // //select albumcard
+}
+
+let purchaseAddEvent = () => {
+    console.log(7)
+    let btn = document.createElement('button');
+    purchasedAlbumCards.append(btn);
+    console.log(8)
+}
 
 // Create album card
 let createAlbumCard = () => {
@@ -64,7 +89,6 @@ let createAlbumCard = () => {
     return albumCard;
 }
 
-
 // Add album card to display
 let saveAlbumInfo = (event) => {
     event.preventDefault();
@@ -72,6 +96,5 @@ let saveAlbumInfo = (event) => {
     let albumCardToDisplay = createAlbumCard();
     albumCardsDisplay.appendChild(albumCardToDisplay);
 }
-
 saveAlbumBtn.addEventListener('click', saveAlbumInfo);
 saveAlbumBtn.addEventListener('click', cancelAdd);
