@@ -11,10 +11,6 @@ const artistName = document.getElementById('artist');
 const priceInput = document.getElementById('price');
 const linkInput = document.getElementById('link');
 
-const totalPriceDisplay = document.querySelector('.total-price');
-//when cancel button is clicked, the wishModalBg is hidden again
-//when saveAlbum is clicked, information from the form is 
-
 //when add album is clicked, album form is no longer hidden
 let initiateAdd = () => {
     wishModalBg.classList.add('active-bg');
@@ -28,12 +24,6 @@ let cancelAdd = () => {
 }
 
 cancelButton.addEventListener('click', cancelAdd);
-
-//when add button is clicked, to save info,
-// create album card div which contains p for album 
-// artist price and list and add album form input to 
-// their respective p
-// this card will be displayed within album card display
 
 // Create album card
 let createAlbumCard = () => {
@@ -65,7 +55,7 @@ let createAlbumCard = () => {
     purchaseLabel.htmlFor = "purchase-checkbox";
     purchaseLabel.appendChild(document.createTextNode('Purchased'));
     albumCard.appendChild(purchaseLabel);
-    
+
     let purchaseCheckBox = document.createElement('input');
     purchaseCheckBox.type = "checkbox";
     purchaseCheckBox.id = "purchase-checkbox";
@@ -81,7 +71,6 @@ let saveAlbumInfo = (event) => {
 
     let albumCardToDisplay = createAlbumCard();
     albumCardsDisplay.appendChild(albumCardToDisplay);
-    addAllPrices();
 }
 
 saveAlbumBtn.addEventListener('click', saveAlbumInfo);
