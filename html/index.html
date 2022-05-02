@@ -27,19 +27,19 @@
         <div class="price-display">
             <p> Total price of albums:</p>
         </div>
-        <button id="add-album-button"> Add an album</button>
+        <button class="add-album-button"> Add an album</button>
         <div class="wish-modal-bg">
             <div class="wish-modal">
                 <form id="album-wishlist-form">
                     <h2> Add an album!</h2>
                     <label for="album"> Album name</label>
-                        <input type="text" name="album-name" id="album">
+                        <input type="text" name="album-name" id="album" required="required">
                     <label for="artist">Artist name</label>
-                        <input type="text" name="artist-name" id="artist">
+                        <input type="text" name="artist-name" id="artist" required="required">
                     <label for="link">Link</label>
                         <input type="link" name="album-link" id="link">
                     <label for="price"> Price</label>
-                        <input type="text" name="album-price" id="price">
+                        <input type="text" name="album-price" id="price" required="required">
                     <input type="submit" value="Add!" id="add-button">
                 </form>
                 <button id="cancel"> x</button>

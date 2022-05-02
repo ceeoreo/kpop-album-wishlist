@@ -71,7 +71,7 @@ main {
     width: 70vw;
 }
 
-#add-album-button {
+.add-album-button {
     margin: 20px 0;
     padding: 15px;
     border-radius: 5px;
@@ -91,6 +91,10 @@ main {
     background-color: rgba(0, 0, 0, 0.5);
     visibility: hidden;
     /* add transtion animation  */
+}
+
+.active-bg {
+    visibility: visible;
 }
 
 .wish-modal {
