@@ -26,6 +26,7 @@ main {
     border: 2px solid;
     height: 60vh;
     width: 70vw;
+    overflow: scroll;
 }
 
 .radio-labels {
@@ -50,6 +51,7 @@ main {
     width: 100%;
     display: none;
     /* margin: 0 50px; */
+
 }
 
 .radio-tabs:checked+.radio-labels {
