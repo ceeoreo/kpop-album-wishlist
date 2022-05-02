@@ -29,13 +29,7 @@ let cancelAdd = () => {
 
 cancelButton.addEventListener('click', cancelAdd);
 
-//when add button is clicked, to save info,
-// create album card div which contains p for album 
-// artist price and list and add album form input to 
-// their respective p
-// this card will be displayed within album card display
-
-// Create album card
+// Create album card function
 let createAlbumCard = () => {
     let albumCard = document.createElement('div');
     albumCard.classList.add('album-card');
@@ -61,63 +55,50 @@ let createAlbumCard = () => {
     pricePar.append(userPriceAdd);
     albumCard.appendChild(pricePar);
     
-    // let purchaseCheckBox = document.createElement('input');
-    // purchaseCheckBox.type = "checkbox";
-    // checkbox.name = "name";
-    // checkbox.value = "value";
-    // purchaseCheckBox.id = "purchase-checkbox";
-
     let purchaseLabel = document.createElement('label')
     purchaseLabel.htmlFor = "purchase-checkbox";
     purchaseLabel.appendChild(document.createTextNode('Purchased'));
     albumCard.appendChild(purchaseLabel);
-    // albumCard.appendChild(purchaseCheckBox);
+
+    let purchaseCheckBox = document.createElement('input');
+    purchaseCheckBox.type = "checkbox";
+    purchaseCheckBox.id = "purchase-checkbox";
+    albumCard.appendChild(purchaseCheckBox)
+
     return albumCard;
 }
 
 // Function for adding prices
 let addAllPrices = () => {
     let allPrices = document.querySelectorAll('.prices');
-    // let allPricesArr = Object.values(allPrices);
-
-    // console.log(allPricesArr);
-    // if (allPricesArr.length > 0) {
-    //     let numAllPrices = allPricesArr.map(priceText => Number(priceText.textContent));
-    //     numAllPrices.reduce((accumulator, currentValue) => {
-    //         accumulator + currentValue;
-    //         console.log(accumulator)
-    //         totalPriceDisplay.append(accumulator);
-    //         console.log('her')
-    //     }
-    // , 0);
-    // } else {
-    //     let price = allPricesArr[0];
-
-    //     let priceNum = Number(price.textContent)
-    //     console.log(priceNum);
-    //     totalPriceDisplay.append(priceNum);
-    // } 
-    for (let i=0; i <allPrices.length; i++){
-        let price = allPrices[i];
-
-        let priceNum = Number(price.textContent);
-
-        if (i === 0){
-            totalPriceDisplay.append(priceNum);
-        } else {
-            // let currentPrice = ;
-            console.log("hi");
-        }
-    }
+    let length = allPrices.length;
+    let curIndex = length - 1;
+    let curPrice = allPrices[curIndex];
+    let curPriceNum = Number(curPrice.textContent); 
 }
+
+let displayAllPrices = () => {
+    let allPrices = document.querySelectorAll('.prices');
+    let length = allPrices.length;
+    let curIndex = length - 1;
+    let curPrice = allPrices[curIndex];
+    let curPriceNum = Number(curPrice.textContent);
+
+    totalPriceDisplay.append(curPriceNum);
+
+}
+
+// previous price + current price
 
 // Add album card to display
 let saveAlbumInfo = (event) => {
+    // stops submit which causes page refresh
     event.preventDefault();
 
     let albumCardToDisplay = createAlbumCard();
     albumCardsDisplay.appendChild(albumCardToDisplay);
     addAllPrices();
+
 }
 
 saveAlbumBtn.addEventListener('click', saveAlbumInfo);
